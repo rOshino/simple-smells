@@ -60,7 +60,7 @@ export class Stage extends StageBase<
   ): Promise<Partial<StageResponse<ChatStateType, MessageStateType>>> {
     const { content, isBot } = userMessage;
 
-    if (isBot || (!content.includes("*snap*") && !content.includes("*Snap*"))) {
+    if (isBot || (!content.includes("*Present*") && !content.includes("*present*"))) {
       return {
         stageDirections: null,
         messageState: null,
